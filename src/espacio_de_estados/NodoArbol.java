@@ -3,7 +3,6 @@ package espacio_de_estados;
 import java.util.ArrayList;
 
 public class NodoArbol <T extends Estado> {
-
   private final T estado;
   private NodoArbol padre;
   private final ArrayList<NodoArbol> hijos;
@@ -11,21 +10,16 @@ public class NodoArbol <T extends Estado> {
     this.estado = estado;
     hijos = new ArrayList();
   }
-
   public NodoArbol getPadre() {
     return padre;
   }
-
   public void setPadre(NodoArbol padre) {
     this.padre = padre;
   }
-
   public T getEstado() {
     return estado;
   }
-
   public ArrayList<NodoArbol> getHijos() {
     return hijos;
   }
-
 }

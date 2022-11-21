@@ -13,7 +13,7 @@ public class BusquedaBestFirst extends EstrategiaBusqueda {
   public void encolarSucesores(Estado estadoActual, ArrayList<Estado> sucesores) {
     for (Estado sucesor:sucesores) {
       if (validar(sucesor)) {
-        double costo = problema.getCostoEstmado(sucesor);
+        double costo = problema.getCostoEstimado(sucesor);
         sucesor.setCostoEstimado(costo);
         sucesor.setPredecesor(estadoActual);
         colaBusqueda.encolarConPrioridad(sucesor, costo);

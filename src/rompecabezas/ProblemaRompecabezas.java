@@ -23,21 +23,22 @@ public class ProblemaRompecabezas extends ProblemaBusqueda<Rompecabezas> {
   }
 
   public ProblemaRompecabezas (String sInicial, String sMeta, int tipoCostoAcumulado, int tipoCostoEstimado) {
-    this(new Rompecabezas(sInicial), new Rompecabezas(sMeta), tipoCostoAcumulado, tipoCostoEstimado );
+    this(new Rompecabezas(sInicial), new Rompecabezas(sMeta), tipoCostoAcumulado, tipoCostoEstimado);
   }
 
   public ProblemaRompecabezas (Rompecabezas rInicial, Rompecabezas rMeta) {
     this (rInicial, rMeta, COSTO_FIJO, DIFERENTES);
   }
 
-  public ProblemaRompecabezas ( String sInicial, String sMeta) {
+  public ProblemaRompecabezas (String sInicial, String sMeta) {
     this (new Rompecabezas(sInicial), new Rompecabezas(sMeta));
   }
 
   @Override
   public double getCosto (Rompecabezas estadoActual, Rompecabezas estadoSucesor) {
     switch (tipoCostoAcumulado) {
-      case COSTO_FIJO: return 1;
+      case COSTO_FIJO:
+        return 1;
       case MAS_CARO_VERTICAL:
       case MAS_CARO_HORIZONTAL: {
         Point ceroActual = estadoActual.getUbicacion(0);
@@ -50,7 +51,7 @@ public class ProblemaRompecabezas extends ProblemaBusqueda<Rompecabezas> {
     }
   }
   @Override
-  public double getCostoEstmado (Rompecabezas estadoActual) {
+  public double getCostoEstimado (Rompecabezas estadoActual) {
     int n = estadoActual.getDimension();
     int totalNumeros = n * n;
     double costo = 0;

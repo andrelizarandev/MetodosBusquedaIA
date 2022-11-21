@@ -5,9 +5,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 public class Arbol extends HashMap<Long, NodoArbol> {
-
   private NodoArbol raiz;
-
   public void insertar (Estado estado) {
     NodoArbol nodo = new NodoArbol(estado);
     put(estado.getId(), nodo);
@@ -19,7 +17,6 @@ public class Arbol extends HashMap<Long, NodoArbol> {
       nodo.setPadre(nodoPadre);
     }
   }
-
   public boolean contiene (Estado estado) {
     String info = estado.getInfo();
     Iterator <NodoArbol> nodos = this.values().iterator();
@@ -29,7 +26,6 @@ public class Arbol extends HashMap<Long, NodoArbol> {
     }
     return false;
   }
-
   public ArrayList<Estado> getRuta (Estado estado) {
     ArrayList<Estado> ruta = new ArrayList();
     NodoArbol siguiente = get(estado.getId());
@@ -39,7 +35,6 @@ public class Arbol extends HashMap<Long, NodoArbol> {
     }
     return ruta;
   }
-
   public NodoArbol getRaiz() {
     return raiz;
   }

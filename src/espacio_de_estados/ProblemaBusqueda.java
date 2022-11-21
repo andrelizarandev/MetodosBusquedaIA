@@ -16,7 +16,7 @@ public abstract class ProblemaBusqueda <T extends Estado> {
   }
 
   public abstract double getCosto (T estadoActual, T estadoSucesor);
-  public abstract double getCostoEstmado(T estadoActual);
+  public abstract double getCostoEstimado(T estadoActual);
   public abstract ArrayList<T> getSucesores (T estadoActual);
 
   public T getEstadoInicial() {

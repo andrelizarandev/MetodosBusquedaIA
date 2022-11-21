@@ -34,6 +34,7 @@ public abstract class EstrategiaBusqueda {
     colaBusqueda.encolarAlInicio(problema.estadoInicial);
     int i = 0;
     while (!colaBusqueda.isEmpty()) {
+      System.out.println("" + (i++) + " " + colaBusqueda);
       try {
         Thread.sleep(1000);;
       } catch (InterruptedException ex) {
@@ -50,7 +51,7 @@ public abstract class EstrategiaBusqueda {
   }
 
   protected boolean validar (Estado sucesor) {
-    if (!conRepeticion) return arbol.contiene(sucesor);
+    if (!conRepeticion) return !arbol.contiene(sucesor);
     return true;
   }
 
