@@ -30,6 +30,7 @@ public class ProblemaRompecabezas extends ProblemaBusqueda<Rompecabezas> {
     this (rInicial, rMeta, COSTO_FIJO, DIFERENTES);
   }
 
+  // Por constructores llegamos a ProblemaBusqueda donde entregaremos objetos Rompecabezas que por constructor les pasaremos los strings de estado inicial y final.
   public ProblemaRompecabezas (String sInicial, String sMeta) {
     this (new Rompecabezas(sInicial), new Rompecabezas(sMeta));
   }

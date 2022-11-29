@@ -4,9 +4,8 @@ import java.util.ArrayList;
 
 import static espacio_de_estados.EstrategiaBusqueda.*;
 
-
+// Necesario determinar el estado inicial y meta
 public abstract class ProblemaBusqueda <T extends Estado> {
-
   protected T estadoInicial;
   protected T estadoMeta;
 
@@ -27,6 +26,7 @@ public abstract class ProblemaBusqueda <T extends Estado> {
     return estadoMeta;
   }
 
+  // Problema.buscarSolucion que extiende de ProblemaBusqueda se le son pasados como argumentos las constantes de método de búsqueda y si llevará repetición creando un objeto dependiendo a este, que extiende de EstrategiaBusqueda.
   public void buscarSolucion (int tipoEstrategia, boolean repeticion) {
     EstrategiaBusqueda busqueda;
     switch (tipoEstrategia) {

@@ -9,6 +9,7 @@ public class BusquedaPorAmplitud extends EstrategiaBusqueda {
     nombreEstrategia = "Busqueda por Amplitud";
   }
 
+  // Al ser FIFO el primero que entra es el primero en salir
   @Override
   public void encolarSucesores(Estado estadoActual, ArrayList<Estado> sucesores) {
     for (Estado sucesor: sucesores) {

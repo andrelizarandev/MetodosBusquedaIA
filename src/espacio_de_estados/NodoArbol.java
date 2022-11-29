@@ -2,6 +2,7 @@ package espacio_de_estados;
 
 import java.util.ArrayList;
 
+// Para determinar padres e hijos de cada nodo
 public class NodoArbol <T extends Estado> {
   private final T estado;
   private NodoArbol padre;

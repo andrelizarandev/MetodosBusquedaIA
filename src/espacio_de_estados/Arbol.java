@@ -6,6 +6,8 @@ import java.util.Iterator;
 
 public class Arbol extends HashMap<Long, NodoArbol> {
   private NodoArbol raiz;
+
+  // Guardaremos el id del nodoarbol, de no tener padre quiere decir que es raiz, si no, se agrega como hijo de otro nodo árbol
   public void insertar (Estado estado) {
     NodoArbol nodo = new NodoArbol(estado);
     put(estado.getId(), nodo);
@@ -17,6 +19,8 @@ public class Arbol extends HashMap<Long, NodoArbol> {
       nodo.setPadre(nodoPadre);
     }
   }
+
+  // Preguntar si existe dentro de un nodoarbol
   public boolean contiene (Estado estado) {
     String info = estado.getInfo();
     Iterator <NodoArbol> nodos = this.values().iterator();
@@ -26,6 +30,8 @@ public class Arbol extends HashMap<Long, NodoArbol> {
     }
     return false;
   }
+
+  // Buscamos el nodo meta preguntando con su id
   public ArrayList<Estado> getRuta (Estado estado) {
     ArrayList<Estado> ruta = new ArrayList();
     NodoArbol siguiente = get(estado.getId());

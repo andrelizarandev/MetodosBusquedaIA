@@ -15,6 +15,7 @@ public class Rompecabezas extends Estado {
 
   public Rompecabezas (String datos) {
     String[] tokens = datos.split(",");
+    // Raiz cuadrada para crear un array de dos direcciones y rellenamos con ints
     int n = (int) Math.sqrt(tokens.length);
     matriz = new int[n][n];
     for(int i = 0; i < n; i++) {

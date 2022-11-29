@@ -9,6 +9,7 @@ public class BusquedaPorProfundidad extends EstrategiaBusqueda {
     nombreEstrategia = "Busqueda por Profundidad";
   }
 
+  // FIFO
   @Override
   public void encolarSucesores(Estado estadoActual, ArrayList<Estado> sucesores) {
     for (Estado sucesor: sucesores) {

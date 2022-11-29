@@ -2,6 +2,7 @@ package espacio_de_estados;
 
 public abstract class Estado {
 
+    // Es necesario definir todas las posibles propiedades que pueden tener nuestras clases
     private static long contador;
     private final long id;
     private Estado predecesor;
